@@ -1,0 +1,128 @@
+palette = "prism"
+# ==============================================================================
+# Nushell Starship Prompt
+# ==============================================================================
+
+format = """
+[](accent)\
+$os\
+$username\
+[](bg:surface fg:accent)\
+$directory\
+[](fg:surface bg:base)\
+$git_branch\
+$git_status\
+[](fg:base)\
+$fill\
+$cmd_duration\
+$time\
+$line_break\
+$character"""
+
+add_newline = true
+command_timeout = 1000
+
+
+# ==============================================================================
+# Operating System
+# ==============================================================================
+
+[os]
+disabled = false
+style = "bg:accent fg:base"
+format = "[$symbol]($style)"
+
+[os.symbols]
+Arch = "  "
+CachyOS = "  "
+Linux = "  "
+
+
+# ==============================================================================
+# Username
+# ==============================================================================
+
+[username]
+show_always = true
+style_user = "bold bg:accent fg:base"
+style_root = "bold bg:red fg:base"
+format = "[$user ]($style)"
+
+
+# ==============================================================================
+# Directory
+# ==============================================================================
+
+[directory]
+style = "bold bg:surface fg:cyan"
+format = "[ 󰉋 $path ]($style)"
+truncation_length = 3
+truncate_to_repo = false
+home_symbol = "~"
+
+[directory.substitutions]
+"Documents" = "󰈙 "
+"Downloads" = "󰇚 "
+"Music" = "󰝚 "
+"Pictures" = "󰉏 "
+"Projects" = "󰲋 "
+
+
+# ==============================================================================
+# Git
+# ==============================================================================
+
+[git_branch]
+symbol = " "
+style = "bg:base fg:mauve"
+format = "[ $symbol$branch]($style)"
+
+[git_status]
+style = "bg:base fg:yellow"
+format = "[$all_status$ahead_behind ]($style)"
+
+
+# ==============================================================================
+# Right Side
+# ==============================================================================
+
+[fill]
+symbol = " "
+
+[cmd_duration]
+min_time = 500
+style = "fg:yellow"
+format = "[󰔚 $duration ]($style)"
+
+[time]
+disabled = false
+time_format = "%H:%M"
+style = "fg:overlay"
+format = "[ $time]($style)"
+
+
+# ==============================================================================
+# Structured Prompt Character
+# ==============================================================================
+
+[character]
+success_symbol = "[╰─](bold overlay)[❯](bold green)"
+error_symbol = "[╰─](bold overlay)[❯](bold red)"
+vimcmd_symbol = "[╰─](bold overlay)[❯](bold mauve)"
+
+[palettes.prism]
+base = "#191724"
+surface = "#26233a"
+text = "#e0def4"
+blue = "#31748f"
+cyan = "#9ccfd8"
+mauve = "#c4a7e7"
+green = "#9ccfd8"
+red = "#eb6f92"
+yellow = "#f6c177"
+peach = "#ebbcba"
+overlay = "#908caa"
+arch = "#ebbcba"
+accent = "#ebbcba"
+purple = "#c4a7e7"
+bright-black = "#908caa"

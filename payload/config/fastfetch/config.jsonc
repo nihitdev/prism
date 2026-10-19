@@ -1,0 +1,88 @@
+{
+    "logo": {
+        "type": "builtin",
+        "source": "arch",
+        "color": {
+            "1": "#ebbcba",
+            "2": "#9ccfd8"
+        },
+        "padding": {
+            "right": 3
+        }
+    },
+    "display": {
+        "separator": "  ",
+        "color": {
+            "keys": "#ebbcba",
+            "title": "#ebbcba",
+            "output": "#e0def4",
+            "separator": "#908caa"
+        }
+    },
+    "modules": [
+        "break",
+        {
+            "type": "title",
+            "color": {
+                "user": "#9ccfd8",
+                "at": "#908caa",
+                "host": "#ebbcba"
+            }
+        },
+        {
+            "type": "separator",
+            "string": "─"
+        },
+        {
+            "type": "os",
+            "key": "  OS"
+        },
+        {
+            "type": "kernel",
+            "key": "  Kernel"
+        },
+        {
+            "type": "packages",
+            "key": "󰏖  Packages"
+        },
+        {
+            "type": "shell",
+            "key": "  Shell"
+        },
+        {
+            "type": "terminal",
+            "key": "  Terminal"
+        },
+        {
+            "type": "wm",
+            "key": "  Desktop"
+        },
+        "break",
+        {
+            "type": "host",
+            "key": "󰌢  Host",
+            "keyColor": "#c4a7e7"
+        },
+        {
+            "type": "cpu",
+            "key": "  CPU",
+            "keyColor": "#c4a7e7"
+        },
+        {
+            "type": "gpu",
+            "key": "󰢮  GPU",
+            "keyColor": "#c4a7e7"
+        },
+        {
+            "type": "memory",
+            "key": "  Memory",
+            "keyColor": "#c4a7e7"
+        },
+        {
+            "type": "uptime",
+            "key": "󰔚  Uptime",
+            "keyColor": "#9ccfd8"
+        },
+        "break"
+    ]
+}
